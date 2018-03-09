@@ -43,6 +43,11 @@
 		<?php wp_footer(); ?>
 
 		<!-- analytics -->
+		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.10.2.min.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.fractionslider.js" type="text/javascript" charset="utf-8"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/main.js" type="text/javascript" charset="utf-8"></script>
+
 		<script>
 		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
 		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
