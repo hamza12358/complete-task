@@ -434,6 +434,76 @@ function create_post_type_html5()
     ));
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+// Product Custom Post Type
+function product_init() {
+    // set up product labels
+    $labels = array(
+        'name' => 'Products',
+        'singular_name' => 'Product',
+        'add_new' => 'Add New Product',
+        'add_new_item' => 'Add New Product',
+        'edit_item' => 'Edit Product',
+        'new_item' => 'New Product',
+        'all_items' => 'All Products',
+        'view_item' => 'View Product',
+        'search_items' => 'Search Products',
+        'not_found' =>  'No Products Found',
+        'not_found_in_trash' => 'No Products found in Trash', 
+        'parent_item_colon' => '',
+        'menu_name' => 'Products',
+    );
+    
+    // register post type
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'product'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-randomize',
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes'
+        )
+    );
+    register_post_type( 'product', $args );
+    
+    // register taxonomy
+    register_taxonomy('product_category', 'product', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array( 'slug' => 'product-category' )));
+}
+add_action( 'init', 'product_init' );
+
+
+
+
+*/
+
 /*------------------------------------*\
 	ShortCode Functions
 \*------------------------------------*/
@@ -450,4 +520,90 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
+
+/*------------------------------------*\
+    ShortCode Functions
+\*------------------------------------*/
+
+function service_custom_post_type (){
+
+    
+
+    $labels = array(
+        'name' => 'service',
+        'singular_name' => 'service',
+        'add_new' => 'Add Item',
+        'all_items' => 'All Items',
+        'add_new_item' => 'Add Item',
+        'edit_item' => 'Edit Item',
+        'new_item' => 'New Item',
+        'view_item' => 'view_item',
+        'search_item' => 'Search service',
+        'not_found' => 'No items found',
+        'not_found_in_trash' => 'No items found in trash',
+        'parent_item_colon' => 'Parent Item'
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'publicly_queryable' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'Capability_type' => 'post',
+        'hierarchical' => false,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'revisions',
+            ),
+        'taxonomies' => array('category', 'post_tag'),
+        'menu_position' => 5,
+        'exclude_from_search' => false
+    );
+    register_post_type ('service',$args);  
+}
+add_action('init','service_custom_post_type');
+
+function portfolio_custom_post_type (){
+
+    $labels = array(
+        'name' => 'portfolio',
+        'singular_name' => 'portfolio',
+        'add_new' => 'Add Item',
+        'all_items' => 'All Items',
+        'add_new_item' => 'Add Item',
+        'edit_item' => 'Edit Item',
+        'new_item' => 'New Item',
+        'view_item' => 'view_item',
+        'search_item' => 'Search portfolio',
+        'not_found' => 'No items found',
+        'not_found_in_trash' => 'No items found in trash',
+        'parent_item_colon' => 'Parent Item'
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'publicly_queryable' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'Capability_type' => 'post',
+        'hierarchical' => false,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'revisions',
+            ),
+        'taxonomies' => array('category', 'post_tag'),
+        'menu_position' => 5,
+        'exclude_from_search' => false
+    );
+    register_post_type ('portfolio',$args);  
+}
+add_action('init','portfolio_custom_post_type');
 ?>

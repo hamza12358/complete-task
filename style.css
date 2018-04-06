@@ -96,10 +96,10 @@ body{padding:0; margin:0; background-color:#FFF; font-family:'Open Sans', Arial,
 	display:block; font-weight:300;
 }
 .home-portfolio li:hover h4 a {background:url(../images/port_headhr.png) left top repeat-x; text-decoration:none;}
-.home-portfolio li.mapps {background-color:#f3ac1c;}
-.home-portfolio li.wapps {background-color:#6bce07;}
-.home-portfolio li.cdgns {background-color:#0099ff;}
-.home-portfolio li.bsol  {background-color:#fd472f;}
+.home-portfolio li.mapps {background-color:#f3ac1c; float: left;}
+.home-portfolio li.wapps {background-color:#6bce07; float: left;}
+.home-portfolio li.cdgns {background-color:#0099ff; float: left;}
+.home-portfolio li.bsol  {background-color:#fd472f; float: left;}
 
 #clients .img-thumbnail {opacity:0.5; filter:alpha(opacity=50);}
 #clients .img-thumbnail:hover {opacity:1; filter:alpha(opacity=100);}

@@ -1,7 +1,7 @@
 			<!-- footer -->
 
 			<div class="clear pad-15"></div>
-			 <img src="<?php echo get_template_directory_uri(); ?>/images/footer.png" class="img-responsive">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/footer.png" class="img-responsive">
 			<footer id="contact">
 				<div class="container">
                     <div class="row">
@@ -33,11 +33,9 @@
 				    </div> 
 				</div>           
 				<!-- /copyright -->
-
-			</footer>
+            </footer>
 			<!-- /footer -->
-
-		</div>
+        </div>
 		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>
@@ -56,6 +54,5 @@
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
 		</script>
-
-	</body>
+    </body>
 </html>
